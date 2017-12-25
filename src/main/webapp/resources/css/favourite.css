@@ -1,0 +1,91 @@
+*:focus { outline: none; }
+*{
+    font-family: 微软雅黑;
+}
+#brand{
+	color: #EB7762;
+}
+.fBar{
+	background-color: #F0F0F0; 
+	border-bottom:white 2px solid;
+}
+#article{
+	background-color: white;
+	width: 60%;
+	margin: auto;
+	background-color: white;
+	padding-bottom: 20px;
+	margin-top: 30px;
+}
+#content{
+	padding-top: 20px;
+	padding-left: 25px;
+	position: relative;
+}
+#favPic{
+	border-bottom: solid 2px #F0F0F0;
+	text-align: center;
+}
+#favPic>img:hover{
+	cursor: pointer;
+}
+#favPic img{
+	/*padding:20px 0;*/
+    padding-bottom: 15px;
+	width: 70%;
+	height: auto;
+}
+#Extras{
+	padding: 20px;
+	padding-left: 20px;
+	border-bottom: solid 2px #F0F0F0;
+}
+#titlef{
+
+	padding:0px 0px 20px 0;
+	padding-left: 22px;
+	border-bottom: solid 2px #F0F0F0;
+}
+#inputs{
+	right: 25px;
+	bottom: 1px;
+	position: absolute;
+}
+#descsf{
+    border-bottom: solid 2px #F0F0F0;
+    padding-left: 22px;
+    padding-bottom: 11px;
+}
+#urlf{
+	border-bottom: solid 2px #F0F0F0;
+    padding-left: 22px;
+    padding-bottom: 11px;
+    /*color: #269ABC;*/
+}
+#deletes{
+    margin-right: 2px;
+}
+#updates,#deletes {
+    margin-top: 15px;
+}
+#updates{
+    margin-right: 15px;
+}
+.none{
+    display: none;
+}
+#imgContainer{
+    cursor:pointer;
+    padding: 5px;
+    width:75%;
+    margin:auto;
+    margin-bottom:10px;
+    border: solid 2px #F0F0F0;
+}
+#imgContainer>div{
+    background-color: #F8F8F8;
+    height: 30rem;
+    text-align: center;
+    font-weight: bold;
+    line-height: 30rem;
+}

@@ -1,0 +1,102 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 微软雅黑;
+}
+#con_left{
+    height: 125rem;
+    color: white;
+    background-color:#264666;
+}
+#con_right{
+    height: 120rem;
+    /*		color:#C2C0C2;*/
+}
+#my_img{
+    margin-top: 6.3rem;
+}
+.my_info{
+    margin-top: 2.8rem;
+}
+.btn-circle {
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 1.8rem;
+    line-height: 2.44rem;
+    border-radius: 3.5rem;
+    float: left;
+}
+.btn-circle_right{
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 1.8rem;
+    line-height: 2.44rem;
+    border-radius: 3.5rem;
+    float: left;
+    background-color:#264666;
+    color:white;
+    margin-left: 1.8rem;
+    margin-top: -1.6rem;
+}
+.line{
+    margin-top: -15px;
+
+}
+.hr{
+    border: 1px #264666 solid;
+}
+.prefer{
+    width: 5.4rem;
+    height: 5.4rem;
+    text-align: center;
+    padding: 0.6rem 0.2rem;
+    font-size: 2.8rem;
+    line-height: 4.5rem;
+    color: white;
+    background-color:#264666;
+}
+.btn:hover{
+    cursor:default;
+}
+.title{
+    margin-top: 4.5rem;
+    margin-bottom: 4rem;
+}
+.title>.col-md-6 span:first-child{
+    font-size: 2.6rem;
+}
+.title>.col-md-6 span:nth-child(2){
+    color:#ACABAB;
+}
+.des{
+    color: #ACACAC;
+    font-size: 1.4rem;
+}
+.my_word{
+    color: #ACACAC;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 2.6rem;
+}
+#list>div{
+    margin-top: 1.5rem;
+}
+.pingzhang{
+	background-color: black;
+	position: absolute;
+	z-index: 2;
+	opacity: 0.8;
+	height:3000px;
+	width: 100%
+}
+#pass{
+	padding:0 2px;
+}
+#Gs{
+    cursor: pointer;
+    margin-left: 10px
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="resources/images/favicon.ico" />
+<title>myBlog</title>
+
+<link href="resources/css/myBlog.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="resources/css/bootstrap.css" rel="stylesheet">
+<!--<link href="../../../../../myBlog/css/font-awesome.min.css" rel="stylesheet">-->
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>-->
+      <!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+    <!--<![endif]&ndash;&gt;-->
+
+</head>
+<body>
+<nav class="navbar-inverse"  style="background-image: url(resources/images/custom.png);background-size:cover">
+  <div style="padding-left:20vh">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="myBlog.html">MyBlog</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	<div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="ziheng.html">简历档案</a></li>
+      <form  id="baiduForm" class="navbar-form navbar-left" action="http://www.baidu.com/baidu" target="_blank">
+        <div class="form-group">
+         <span class="fa fa-search" id="search">&nbsp;</span>
+          <input type="text" name=word class="form-control" placeholder="搜索..." style="background-color:#222222; color:#909090;border: none" >
+            <!--<input type="submit" id="subBaiDu" style="display: none">-->
+        </div>
+      </form>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid"  id="myName">
+  	
+	<div class="col-md-8 col-xs-12 col-md-offset-1">
+		<h2>zi-Heng</h2>
+		<a href="https://github.com/" target="_blank" class="mylogo"><span class="fa fa-github fa-lg"></span></a>
+		<a href="https://weibo.com/" target="_blank" class="mylogo"><span class="fa fa-weibo fa-lg"></span></a>
+		<a href="https://mail.qq.com/" target="_blank" class="mylogo" style="margin-top: 1px;"><span class="fa fa-qq"></span></a>
+		<a href="https://twitter.com/" target="_blank" class="mylogo" style="margin-top: 1px;"><span class="fa fa-twitter fa-lg"></span></a>
+		<a href="https://www.facebook.com/" target="_blank" class="mylogo" style="margin-top: 1px;"><span class="fa fa-facebook-square fa-lg"></span></a>
+
+	</div>
+</div>
+</nav>
+<div class="container-fluid middleM">
+	<div class="row">
+	<div class="col-md-3 col-xs-12 middleL col-md-offset-1">
+		<ul class="nav nav-tabs" id="selects">
+			<li role="presentation" class="active"><a href="#">JavaEE</a></li>
+			<li role="presentation"><a href="#">Linux</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ECS <span class="caret"></span></a>
+				  <ul class="dropdown-menu" id="btnList">
+			 	 </ul>
+			</li>
+		</ul>
+
+		<div class="mytext" id="articleList">
+
+		</div>
+        <div id="myBtn"><button type="button" class="btn btn-success" >撰写文章</button></div>
+	</div>
+	<div class="col-md-7 col-xs-12 middleR">
+				<div class="load"><span class="fa fa-spinner fa-4x"></span></div>
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			  </ol>
+			  <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox" id="imglist">
+                <div class="item active">
+                    <div class="theimgs">
+                    		<div class="load"><span class="fa fa-spinner fa-4x"></span></div>
+                    		<img src="#">
+                    </div>
+                </div>
+            </div>
+                  <!-- Controls -->
+                  <a id="gooff" class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" style="opacity: 0.4">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a id="go" class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" style="opacity: 0.4">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+        </div>
+		<div class="middleRightFloatR"><h3><span class="fa fa-spinner"></span></h3></div>
+		<div class="middleRightSpan2"><div class="middleRightFloatR" id="myDesc"><span class="fa fa-spinner"></span></div></div>
+		<div class="middleRightSpan3">
+            <h5>
+                <span class="fa fa-spinner"></span>
+            </h5>
+        </div>
+		</div>
+	</div>
+</div>
+<div id="caretdown"><span class="fa fa-caret-down"  onclick="caretdown()">&nbsp;展开...</span></div>
+<div id="moreContainer">
+
+</div>
+<div class="text-center">
+	<div id="copyright">
+		<span>©2017 ziHeng.of the interest</span>
+	</div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="resources/js/jquery2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resources/js/bootstrap.js"></script>
+    <script src="resources/js/myBlog.js"></script>
+    <script src="resources/js/myBlogMore.js"></script>
+
+</body>
+</html>

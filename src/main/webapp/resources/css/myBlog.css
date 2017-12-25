@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+    font-family: 微软雅黑;
+}
+body{
+	min-height:100vh;
+}
+.middleL{
+    /*margin-left: 7rem;*/
+    position: relative;
+    min-height: 20rem;
+}
+.middleR{
+	margin-left: 3.5rem;
+	position: relative;
+}
+.middleM{
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+    padding-bottom:4rem ;
+    /*margin: auto;*/
+    /*background-color: #5bc0de;*/
+}
+.containerMy{
+width: 100%;
+}
+.middleLSpan{
+padding:1rem 0.5rem;
+border-bottom: #E3E3E3 1px solid;
+position: relative;
+}
+.middleLSpan:hover{
+cursor: pointer;
+}
+.middleLDay{
+position: absolute;
+bottom: 0;
+right: 0;
+color:#347AB7;
+font-size: 12px;
+}
+.middleRightFloatR{
+float: right;
+}
+.middleRightSpan2{
+clear: both
+}
+.middleRightSpan3{
+clear: both;
+margin-top: 2.5rem;
+text-align: right;
+}
+.listTwo{
+padding-bottom:10rem;
+border-right: #EFEFEF 2px solid;
+}
+.listTwos{
+    /*height: 42rem;*/
+   
+}
+.listLeft{
+    right: 0;
+    top:10rem;
+    position: relative;
+}
+.listLeftSpan1{
+    text-align: right;
+    margin-top: 15px;
+}
+.listLeftSpan2{
+    position: absolute;
+    right: 10px;
+    bottom: -2rem;
+    text-align: right;
+}
+.listRight{
+    position: relative;
+    left: 0;
+    top:5rem;
+}
+.listRightSpan1{
+    margin-top: 10px;
+    /*position: absolute;*/
+    text-align: left;
+    /*left: 15px;*/
+    /*width: 40rem;*/
+    height:auto;
+}
+.listRightSpan2{
+    position: absolute;
+    /*left: 0px;*/
+    bottom: -2rem;
+    text-align: left;
+}
+hr{
+    background-color:#EEEEEE;
+    height: 2px;
+}
+#myTech{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+#copyright{
+    background-color: #222222;
+    padding: 1rem 0;
+    color: #FEFEFE;
+}
+.mytext{
+/*		border: 1px solid #DDDDDD;*/
+min-height: 34.5rem;
+}
+#myBtn{
+position: absolute;
+right: 1.0rem;
+bottom: -6vh;
+}
+#myName{
+/*		background-image: url(images/custom.png);*/
+	color: #FFFFFF;
+/*		background-size: cover;*/
+}
+#myName h2{
+padding-bottom: 12px;
+padding-right: 5px;
+float: left;
+}
+.mylogo{
+float: left;
+margin-left: 11px;
+padding-top: 35px;
+color:#929392;
+}
+.mylogo:hover{
+color: white;
+cursor: pointer;
+}
+
+.theimgs{
+    width: 100%;
+	height: auto;
+	background-color:white;
+	/*position: relative;*/
+}
+.theimgs img{
+width: 100%;
+height:auto;
+margin-top:-3%;
+}
+.projectPic{
+/*height: 28rem;*/
+/*background-color: cadetblue;*/
+}
+.projectPic img{
+width: 100%;
+height:auto;
+}
+/*.listLeftSpan2 a,.listRightSpan2 a{*/
+    /*text-decoration: none;*/
+    /*color: black;*/
+/*}*/
+.listLeftSpan2,.listRightSpan2{
+    /*cursor: pointer;*/
+    font-weight:bold;
+}
+.listLeftSpan2 a,.listRightSpan2 a{
+    color: black;
+}
+.listLeftSpan2 a:hover{
+    color: #c13748;
+    text-decoration: none;
+}
+.listRightSpan2 a:hover{
+	color: #c13748;
+    text-decoration: none;
+}
+.listRightSpan1,.listLeftSpan1{
+	font-weight: 400;
+}
+.projectR{
+    color: #c13748;
+}
+#search{
+color: white;
+text-decoration: none;
+cursor: pointer
+}
+
+#caretdown>span{
+    cursor: pointer;
+    font-weight: bold;
+    color:#929392 ;
+}
+#caretdown span:hover{
+    color: #c13748;
+}
+#caretdown{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.load{
+	position: absolute; 
+	/*width: 66rem;*/
+	width: 100%;
+	text-align: center;
+	left: -1rem;
+	/*background-color: white;*/ 
+	height: 44rem;
+  	line-height: 44rem; 
+	text-align: center;
+	color:#929392 ;
+	top: -4rem;
+	/*display: none;*/
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="resources/css/bootstrap.css" rel="stylesheet">
+        <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="resources/css/read.css" rel="stylesheet" />
+        <link href="resources/css/shake.css" rel="stylesheet">
+		<title>Read</title>
+        <link rel="shortcut icon" href="resources/images/favicon.ico" />
+	</head>
+
+	<body>
+		<nav class="nav navbar-default" id="navs">
+			<div class="container-fluid article_nav">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					<a class="navbar-brand" id="brand" href="#">Reading</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="myBlog.html">主页</a>
+						</li>
+						<li>
+							<a href="writing.html" target="_blank">写文章</a>
+						</li>
+
+					</ul>
+					<form  id="baiduForm" class="navbar-form navbar-left" action="http://www.baidu.com/baidu" target="_blank">
+						<div class="form-group">
+							<input name=word type="text" class="form-control" placeholder="搜索...">
+                            <input type="submit" id="subBaiDu" style="display: none">
+						</div>
+                        <span id="search" class="icon-search icon-large">&nbsp;&nbsp;</span>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <button type="button" class="btn btn-xs btn-warning none" id="updates"><span class="fa fa-thumb-tack">&nbsp;&nbsp;修改&nbsp;</span></button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-xs btn-danger none" id="deletes"><span class="fa fa-trash">&nbsp;&nbsp;删除&nbsp;</span></button>
+                        </li>
+						<li>
+							<a href="javascript:void(0)" onclick="login()">zi-Heng</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<div class="container-fluid">
+			<div class="col-md-6 col-md-offset-3" id="titlesContain">
+				<h1 id="titles"><span class="fa fa-spinner"></span></h1>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="col-md-8 col-md-offset-3" style="margin-top: 2rem;padding-left: 0;">
+				<div class="col-md-1"><img style="border-radius:50%;" width="100%" height="auto" src="resources/images/test2.jpg"></div>
+				<div class="col-md-6" id="mynames">
+                    <span>zi-Heng</span>
+                    <button type="button" class="btn btn-xs btn-success" id="myBtns">&nbsp;+ 查看&nbsp;</button>
+                </div>
+				<div class="col-md-6" id="time">1998.09.01 14:08</div>
+			</div>
+		</div>
+		<div class="container-fluid" style="min-height: 100vh;">
+			<div id="articlesRead"  style="min-height: 48rem"></div>
+            <div class="none" id="util">
+                <button type="button" class="btn btn-default" onclick="Hbtns('h1')"><span>H1</span></button>
+                <button type="button" class="btn btn-default" onclick="Hbtns('h2')"><span>H2</span></button>
+                <button type="button" class="btn btn-default" onclick="Hbtns('h3')"><span>H3</span></button>
+                <button type="button" class="btn btn-default" onclick="Hbtns('h4')"><span>H4</span></button>
+                <button type="button" class="btn btn-default" onclick="btns('bold')"><span class="fa fa-bold"></span></button>
+                <button type="button" class="btn btn-default" onclick="btns('italic')"><span class="fa fa-italic"></span></button>
+                <button type="button" class="btn btn-default" onclick="btns('strikeThrough')"><span class="fa fa-strikethrough"></span></button>
+                <button type="button" class="btn btn-default" onclick="btns('underline')"><span class="fa fa-underline"></span></button>
+                <button type="button" class="btn btn-default" onclick="tLeft()"><span class="fa fa-align-left"></span></button>
+                <button type="button" class="btn btn-default" onclick="tCenter()"><span class="fa fa-align-center"></span></button>
+                <button type="button" class="btn btn-default" onclick="tRight()"><span class="fa fa-align-right"></span></button>
+                <button type="button" class="btn btn-default" onclick="tFull()"><span class="fa fa-align-justify"></span></button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="fa fa-picture-o"></span></button>
+            </div>
+            <div class="none" id="utilRight">
+                <button type="button" class="btn btn-default" onclick="Fbtns('#EA655D')"><span class="utilColor" style="background-color:#EA655D;"></span></button>
+                <button type="button" class="btn btn-default" onclick="Fbtns('#739BBA')"><span class="utilColor" style="background-color:#5BC0DE;"></span></button>
+                <button type="button" class="btn btn-default" onclick="Fbtns('#FEBD2D')"><span class="utilColor" style="background-color:#FEBD2D; "></span></button>
+                <button type="button" class="btn btn-default" onclick="Fbtns('#53AA66')"><span class="utilColor" style="background-color:#53AA66; "></span></button>
+				<button type="button" class="btn btn-default" onclick="bgBtn('#F0F0F0')"><span class="fa fa-map" style="color:#777777;"></span></button>
+            		<button type="button" class="btn btn-default" onclick="CodeBtn()"><span class="fa fa-code"></span></button>
+				<button type="button" class="btn btn-default" onclick="theLine()"><span>—</span></button>
+            </div>
+		</div>
+        <!--模态框-->
+        <div class="modal fade" id="myModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">插入喜欢的图片</h4>
+                    </div>
+                    <form id="uploadForm" method="post" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <input type="file" name="file" width="200px" id="myFile" accept="image/png,image/jpeg" onchange="filesa()">
+                        </div>
+
+                        <a href="#" id="pics">
+                            <!--<img src="images/uImage.png" id="show">-->
+                        </a>
+                        <div class="modal-footer">
+                            <button type="button" id="smb" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button"  class="btn btn-success"  onclick="upLoadPics()">提交</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!--提交模态框-->
+        <input type="hidden" id="sumBitModal"  data-toggle="modal" data-target="#isSumbit"/>
+        <div class="modal fade bs-example-modal-sm"  id="isSumbit" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title">是否确认提交</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button"  class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button"  class="btn btn-success"  id="sumBtns">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--提交模态框2-->
+        <!--密码验证-->
+        <div class="container">
+            <div class="modal fade bs-example-modal-sm" id="loginM"  role="dialog" data-backdrop="static">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h4 class="modal-title">输入密码:</h4>
+                            <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                        </div>
+
+                        <!-- 模态框主体 -->
+                        <div class="modal-body">
+                            <input type="password" id="pass">
+                            <button type="button"  id="Gs" class="btn btn-success btn-sm" >提交</button>
+                        </div>
+
+                        <!-- 模态框底部 -->
+                        <div class="modal-footer">
+                            <input type="hidden" id="closeModel" data-dismiss="modal"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="goLogin" data-toggle="modal" data-target="#loginM"/>
+
+		<div class="text-center">
+			<div id="copyright">
+				<span>©2017 ziHeng.of the interest</span>
+			</div>
+		</div>
+		
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="resources/js/jquery2.1.4.min.js"></script>
+		<script src="resources/js/reader.js"></script>
+		<script src="resources/js/bootstrap.js"></script>
+		<script src="resources/js/aticleUtil.js"></script>
+	</body>
+
+</html>

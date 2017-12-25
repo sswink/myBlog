@@ -1,0 +1,81 @@
+*:focus { outline: none; }
+*{
+	font-family: "微软雅黑";
+}
+#brand{
+	color: #EB7762;
+}
+#util{
+	padding: 10px 0 10px 28px;
+	/*margin-bottom: 10px;*/
+	background-color:#F8F8F8;
+}
+.utilColor{
+    display: block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+}
+#LeftContainer{
+	min-height: 55.8rem;
+	border-right: 2px solid #F0F0F0;
+}
+#LeftContainer:first-child{
+	padding-top: 25px;
+}
+#picsContainer{
+	cursor: pointer;
+	margin-top: 20px;
+	padding: 5px;
+	border: solid 2px #F0F0F0;
+}
+#leftPics{
+	background-color: #F0F0F0;
+	height: 20rem;
+	text-align: center;
+	line-height:20rem ;
+	font-weight: bold;
+}
+#urlContent{
+	width:90%;
+	/*height: 2rem;*/
+	/*background-color: #5BC0DE;*/
+	float: left;
+	margin-left: 3px;
+	border-bottom: solid 2px #F0F0F0;
+}
+#UrlContainer{
+	margin-top: 30px;
+}
+#descriptionContainer{
+	margin-top: 30px;
+}
+#descriptionDesc{
+	/*background-color: #5BC0DE;*/
+	/*height: 20rem;*/
+	border-bottom: solid 2px #F0F0F0;
+}
+
+#rightContainer:first-child{
+	padding-top: 25px;
+}
+#contentCont{
+	/*background-color: #5BC0DE;*/
+	min-height: 50rem;
+}
+#updates{
+    margin-top: 15px;
+}
+.CodeOl{
+	margin-left: 3.6rem;
+	font-size: 12px;
+}
+.CodeOl li{
+	border-left:#8BDE7A 3px solid;
+	padding-left:8px;
+	border-right: 3px solid #F0F0F0;
+	font-size: 14px;
+}
+.CodeOl li:nth-child(even){
+	background-color: #F0F0F0;
+}

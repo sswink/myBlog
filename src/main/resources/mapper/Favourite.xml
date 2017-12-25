@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.myBlog.dao.FavouriteMapper" >
+  <resultMap id="FavouriteMap" type="com.myBlog.entity.Favourite">
+    <id column="favourite_id" jdbcType="BIGINT" property="favouriteId"/>
+    <result column="favourite_title" jdbcType="VARCHAR" property="favouriteTitle"/>
+    <result column="favourite_desc" jdbcType="VARCHAR" property="favouriteDesc"/>
+    <result column="favourite_content" jdbcType="VARCHAR" property="favouriteContent"/>
+    <result column="favourite_pic" jdbcType="VARCHAR" property="favouritePic"/>
+    <result column="user_id" jdbcType="BIGINT" property="userId"/>
+    <result column="favourite_url" jdbcType="VARCHAR" property="favouriteUrl"/>
+  </resultMap>
+
+
+  <!--插入爱好-->
+  <insert id="insertFavourite">
+    insert into favourite (favourite_title,favourite_desc,favourite_content,favourite_pic,user_id,favourite_url)
+    values(#{favourite_title},#{favourite_desc},#{favourite_content},#{favourite_pic},#{user_id},#{favourite_url})
+  </insert>
+
+  <!--查找全部-->
+  <select id="favouritelist" resultMap="FavouriteMap">
+    select favourite_title,favourite_desc,favourite_content,favourite_pic,favourite_url from favourite;
+  </select>
+
+    <!--通过favouriteId查找-->
+    <select id="getFavouriteByFavouriteId" resultMap="FavouriteMap">
+         select favourite_title,favourite_desc,favourite_content,favourite_pic,favourite_url from favourite
+         <where>
+             favourite_id=#{favourite_id}
+         </where>
+    </select>
+
+
+  <!--通过userId查找-->
+  <select id="favouriteListById" resultMap="FavouriteMap">
+    select favourite_id,favourite_title,favourite_desc,favourite_content,favourite_pic,favourite_url from favourite where user_id=#{user_id}
+  </select>
+
+    <!--删除favourite-->
+    <delete id="deleteFavourite">
+        delete from favourite
+        <where>
+            favourite_id=#{favourite_id}
+        </where>
+    </delete>
+    <!--修改favourite-->
+    <update id="updateFavourite">
+        UPDATE favourite set favourite_title=#{favourite_title},favourite_desc=#{favourite_desc},favourite_pic=#{favourite_pic},
+        favourite_content=#{favourite_content},favourite_url=#{favourite_url}
+        <where>
+            favourite_id=#{favourite_id}
+        </where>
+    </update>
+
+</mapper>

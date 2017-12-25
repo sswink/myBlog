@@ -1,0 +1,112 @@
+*:focus { outline: none; }
+
+*{
+    font-family: 微软雅黑;
+}
+#brand {
+	color: #EB7762;
+}
+
+#titles {
+	font-family: '微软雅黑';
+	font-weight: bold;
+	font-size: 35px;
+}
+
+#titlesContain {
+	padding-top: 2.4rem;
+}
+#mynames{
+	padding-left: 0;
+	font-weight: 400;
+	font-size: 18px;
+}
+#time{
+	color: #ACABAC;
+	padding-left: 0px;
+}
+#navs {
+	background-color: white;
+	border-bottom: 2px solid #F0F0F0;
+}
+#myBtns{
+    border-radius: 45%;
+    margin-left: 1rem;
+}
+#articlesRead{
+	width: 60%;
+	margin: auto;
+	/*background-color: #31B0D5;*/
+	margin-top: 2rem;
+    padding-top:15px;
+    padding-bottom: 10rem;
+}
+#copyright{
+	background-color: #ACABAC;
+	padding: 1rem 0;
+	color: #FEFEFE;
+}
+#articlesRead img{
+    width: 100%;
+    height: auto;
+}
+#util{
+    position: fixed;
+    width: 40px;
+    left: 17%;
+    top: 14rem;
+}
+#utilRight{
+    position: fixed;
+    width: 40px;
+    left: 13.5%;
+    top: 14rem;
+}
+
+#utilRight>button{
+    width:42px;
+    height: 30px;
+    line-height: 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+.utilColor{
+    display: block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+
+}
+#util>button{
+    width:42px;
+    height: 30px;
+    line-height: 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+#search{
+    text-decoration: none;
+    cursor: pointer;
+}
+#updates,#deletes {
+    margin-top: 15px;
+}
+#updates{
+    margin-right: 15px;
+}
+.none{
+    display: none;
+}
+.CodeOl{
+	margin-left: 3.6rem;
+	font-size: 12px;
+}
+.CodeOl li{
+	border-left:#8BDE7A 3px solid;
+	padding-left:8px;
+	border-right: 3px solid #F0F0F0;
+	font-size: 14px;
+}
+.CodeOl li:nth-child(even){
+	background-color: #F0F0F0;
+}

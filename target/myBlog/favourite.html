@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Bootstrap -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="resources/css/bootstrap.css" rel="stylesheet">
+<!--<link href="resources/css/font-awesome.min.css" rel="stylesheet">-->
+<!--<link href="css/writing.css" rel="stylesheet">-->
+<link href="resources/css/favourite.css" rel="stylesheet" />
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="resources/css/shake.css" rel="stylesheet">
+<style type="text/css">
+
+</style>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="resources/images/favicon.ico" />
+    <title>Interest</title>
+</head>
+
+<body style="background-color: #F0F0F0;">
+    <nav class="nav navbar-default fBar" >
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                <a class="navbar-brand" id="brand" href="#">Writing</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="myBlog.html">主页</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span id="tx">兴趣</span><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" id="menu">
+                            <li><a href="writing.html">文章</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="project.html">项目</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form  id="baiduForm" class="navbar-form navbar-left" action="http://www.baidu.com/baidu" target="_blank">
+                    <div class="form-group">
+                        <input type="text" name=word class="form-control" placeholder="搜索...">
+                    </div>
+                    <span>&nbsp;&nbsp;</span><span class="fa fa-search  fa-lg" style="text-decoration: none; cursor: pointer"></span>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button type="button" class="btn btn-xs btn-success none" id="updates"><span class="fa fa-thumb-tack">&nbsp;&nbsp;保存&nbsp;</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-xs btn-danger none" id="deletes"><span class="fa fa-trash">&nbsp;&nbsp;删除&nbsp;</span></button>
+                    </li>
+                    <li class="dropdown" id="revise">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span id="reviseSpan">revise</span><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!--<li><a data-revise="1">文章</a></li>-->
+                            <!--<li role="separator" class="divider"></li>-->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:login()">zi-Heng</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid" style="padding-bottom: 40px;">
+        <div id="article">
+            <div>
+                <h4 id="Extras">插入喜欢的图片:</h4>
+                <div id="favPic">
+                    <img src="" class="none">
+                    <div id="imgContainer">
+                        <div>1024*768</div>
+                    </div>
+                </div>
+                <form id="uploadForm" method="post" enctype="multipart/form-data">
+                <input type="file" name="file"style="display: none;" id="favourFile" accept="image/png,image/jpeg" onchange="choosePic()">
+                </form>
+            </div>
+            <div>
+                <h3 id="titlef" contenteditable="true">Favourite_title</h3>
+            </div>
+            <div>
+                <h4 id="urlf" contenteditable="true">Url...</h4>
+            </div>
+            <div>
+                <h4 id="descsf" contenteditable="true">Descrpition</h4>
+            </div>
+            <div id="content">
+                <div style="min-height: 20rem;" contenteditable="true" id="contf">Content</div>
+
+                <input type="button" id="inputs" class="btn btn-success" data-toggle="modal" data-target="#isSumbit" value="提交" />
+                <input type="hidden" id="hidf">
+            </div>
+        </div>
+    </div>
+    <!--提交模态框-->
+    <div class="modal fade bs-example-modal-sm" id="isSumbit" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title">是否确认提交</h4>
+            </div>
+                <div class="modal-footer">
+                    <button type="button"  class="btn btn-default" id="unclose" data-dismiss="modal">关闭</button>
+                    <button type="button"  class="btn btn-success"  id="sumBtnFavour">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--提交模态框-->
+    <input type="hidden" id="sumBitModal"  data-toggle="modal" data-target="#isSumbit2"/>
+    <div class="modal fade bs-example-modal-sm"  id="isSumbit2" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">是否确认提交</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"  class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button"  class="btn btn-success"  id="sumBtns">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--密码验证-->
+    <div class="container">
+        <div class="modal fade bs-example-modal-sm" id="loginM"  role="dialog" data-backdrop="static">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h4 class="modal-title">输入密码:
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </h4>
+                    </div>
+
+                    <!-- 模态框主体 -->
+                    <div class="modal-body">
+                        <input type="password" id="pass">
+                        <button type="button"  id="Gs" class="btn btn-success btn-sm" >提交</button>
+                    </div>
+
+                    <!-- 模态框底部 -->
+                    <div class="modal-footer">
+                        <input type="hidden" id="closeModel" data-dismiss="modal"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="goLogin" data-toggle="modal" data-target="#loginM"/>
+    <!--验证/-->
+
+    <!--<script src="js/jquery-1.11.3.min.js"></script>-->
+    <script src="resources/js/jquery2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resources/js/bootstrap.js"></script>
+    <!--<script src="js/writing.js"></script>-->
+    <script src="resources/js/favourite.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.myBlog.dao.ArticleMapper" >
+  <resultMap id="articleMap" type="com.myBlog.entity.Article">
+    <id column="article_id" jdbcType="BIGINT" property="articleId"/>
+    <result column="article_name" jdbcType="VARCHAR" property="articleName"/>
+    <result column="article_content" jdbcType="VARCHAR" property="articleContent"/>
+    <result column="article_pic" jdbcType="VARCHAR" property="articlePic"/>
+    <result column="article_type" jdbcType="VARCHAR" property="articleType"/>
+    <result column="article_time" jdbcType="BIGINT" property="articleTime"/>
+    <result column="user_id" jdbcType="BIGINT" property="userId"/>
+  </resultMap>
+
+  <!--根据类型读出文章列表-->
+  <select id="articleListByType" resultMap="articleMap">
+    select article_id,article_name,article_type,article_time from article
+    <where>
+      article_type=#{article_type}
+    </where>
+  </select>
+
+  <!--根据用户Id和类型查询文章-->
+  <select id="articleListByUserIdAndType" resultMap="articleMap">
+    select article_id,article_name,article_type,article_time from article
+    <where>
+      article_type=#{article_type} and user_id=#{user_id}
+    </where>
+  </select>
+
+  <!--根据文章Id获取文章-->
+  <select id="article" resultMap="articleMap">
+    select article_name,article_content,article_type,article_time from article
+    <where>
+      article_id=#{article_id}
+    </where>
+  </select>
+  <!--插入文章-->
+  <insert id="insertArticle">
+    insert article (article_name,article_content,user_id,article_type,article_time)
+    values (#{article_name},#{article_content},#{user_id},#{article_type},#{article_time});
+  </insert>
+
+    <!--修改文章-->
+    <update id="updateArticle">
+        update article set article_name=#{article_name},
+        article_content=#{article_content},article_time=#{article_time}
+        <where>
+            article_id=#{article_id}
+        </where>
+    </update>
+
+    <!--删除文章-->
+    <delete id="deleteArticle">
+        DELETE from article where article_id=#{article_id};
+    </delete>
+</mapper>
